@@ -1,0 +1,23 @@
+de:
+  activerecord:
+    models:
+      user: User
+
+  attributes:
+    department: Abteilung
+    description: Beschreibung
+    displayname: Anzeigename
+    facsimiletelephonenumber: Telefax
+    givenname: Vorname
+    location: location
+    mail: Mail
+    mobile: Mobil
+    name: Name
+    sn: Nachname
+    telephonenumber: Telefon
+    username: Username
+
+  controller:
+    ad_users: User
+    ad_groups: Gruppen
+    users: Benutzer

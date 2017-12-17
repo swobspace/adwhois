@@ -1,0 +1,10 @@
+ldap_options:
+  host: 192.0.2.7
+  port: 3268	# global catalog
+  base: dc=example,dc=com
+  auth:
+    method: :simple
+    username: just_a_guest_user
+    password: *****
+
+  

@@ -1,0 +1,16 @@
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "wobapphelpers/breadcrumbs";
+
+body {
+  padding-top: 50px;
+}
+
+// --- FOOTER
+div#footer{
+  color: #999;
+  margin: 24px 0 0 0;
+  border-top: 1px solid #eee;
+}
+

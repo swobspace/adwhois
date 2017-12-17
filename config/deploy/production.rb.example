@@ -1,0 +1,19 @@
+# edit to your needs and copy *.rb.example to *.rb
+# ================================================
+
+set :rails_env, 'production'
+set :branch, "master"
+set :relative_url_root, '/adwhois'
+set :deploy_to, '/var/srv/www/adwhois'
+set :ruby_path, "/opt/ruby/2.3/bin:$PATH"
+
+server "myserver",
+  user: 'deploy',
+  roles: %w{app db web},
+  primary: true,
+  ssh_options: {
+    forward_agent: false,
+    auth_methods: %w(publickey),
+    host_key: %w(ecdsa-sha2-nistp256)
+  }
+

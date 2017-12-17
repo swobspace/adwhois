@@ -1,0 +1,9 @@
+# Controllers
+## AdUser
+
+  bin/rails g controller AdUsers index
+
+## AdGroup
+
+  bin/rails g controller AdGroups index show
+
