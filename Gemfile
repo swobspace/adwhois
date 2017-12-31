@@ -6,17 +6,14 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'simple_form', '~> 3.3'
-gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
-gem 'bower-rails', '~> 0.10.0'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 group :development do
-  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'puma', '~> 3.0'
   gem 'spring'
@@ -35,7 +32,6 @@ group :test, :development do
   gem 'dotenv'
   gem 'guard-rspec', require: false
   gem 'byebug'
-  gem 'rails-controller-testing'
 end
 
 group :test do
@@ -50,8 +46,12 @@ group :production do
   gem 'mysql2'
 end
 
+gem 'simple_form'
+gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
+gem 'font-awesome-sass'
 gem 'cancancan'
 gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'master'
-gem 'immutable-struct'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
+gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
+gem 'rails-controller-testing'

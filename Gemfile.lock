@@ -88,7 +88,6 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
-    bower-rails (0.10.0)
     builder (3.2.3)
     byebug (9.1.0)
     cancancan (2.1.2)
@@ -352,16 +351,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bower-rails (~> 0.10.0)
   byebug
   cancancan
   capistrano-passenger
-  capistrano-rails (~> 1.1)
+  capistrano-rails
   capybara
   coffee-rails (~> 4.2)
   database_rewinder
   dotenv
   factory_girl_rails
+  font-awesome-sass
   guard
   guard-bundler
   guard-livereload
@@ -381,7 +380,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
-  simple_form (~> 3.3)
+  simple_form
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
