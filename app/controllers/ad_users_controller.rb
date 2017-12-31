@@ -14,6 +14,6 @@ class AdUsersController < ApplicationController
 private
 
   def search_params
-    params.permit(:query)
+    params.permit(:query, :utf8, :authenticity_token, :bci).slice(:query)
   end
 end
