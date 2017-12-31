@@ -15,6 +15,7 @@ gem 'jquery-ui-rails'
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
+  gem 'capistrano-yarn'
   gem 'puma', '~> 3.0'
   gem 'spring'
   gem 'guard'
