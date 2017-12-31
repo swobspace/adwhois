@@ -1,7 +1,6 @@
-<ul class="nav navbar-nav">
+<ul class="navbar-nav mr-auto">
   <% if can? :navigate, :ad_users %>
-    <li class="<%= active_class('ad_users') %>">
-      <%=link_to t('controller.ad_users'), main_app.ad_users_path %></li>
-    </li>
+    <%= link_to t('controller.ad_users'), main_app.ad_users_path,
+        class: "nav-link #{active_class('ad_users')}" %>
   <% end %>
 </ul>

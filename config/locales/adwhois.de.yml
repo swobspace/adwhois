@@ -1,4 +1,17 @@
 de:
+  adwhois:
+    action: Aktion
+    misc_info: Sonstige Angaben
+    org_units: Organisationseinheiten
+    locations: Lokationen
+    configuration: Konfiguration
+    change_columns: Spalten ändern
+    show_all: alles anzeigen
+    restore: zurücksetzen
+    search: Suche
+    sort_helper: Sortierhilfe
+    applied_filter: Angewandter Filter
+
   activerecord:
     models:
       user: User
