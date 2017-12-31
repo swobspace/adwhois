@@ -11,10 +11,11 @@ Add npm packages for boskop
 ----
 yarn add jquery@3
 yarn add bootstrap@4.0.0-beta.3
+yarn add popper.js
 yarn add datatables.net
-yarn add datatables.net-bs
+yarn add datatables.net-bs4
 yarn add datatables.net-buttons
-yarn add datatables.net-buttons-bs
+yarn add datatables.net-buttons-bs4
 yarn add jszip
 yarn add pdfmake
 yarn add select2@4

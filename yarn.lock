@@ -102,18 +102,18 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-datatables.net-bs@^1.10.15, datatables.net-bs@^1.10.16:
+datatables.net-bs4@^1.10.15, datatables.net-bs4@^1.10.16:
   version "1.10.16"
-  resolved "https://registry.yarnpkg.com/datatables.net-bs/-/datatables.net-bs-1.10.16.tgz#b0854f5b374f713ae3db4156c7cea8a760c3de76"
+  resolved "https://registry.yarnpkg.com/datatables.net-bs4/-/datatables.net-bs4-1.10.16.tgz#9eee67cfa8565bd3807a603a188305f7d0e20e32"
   dependencies:
     datatables.net "1.10.16"
     jquery ">=1.7"
 
-datatables.net-buttons-bs@^1.5.1:
+datatables.net-buttons-bs4@^1.5.1:
   version "1.5.1"
-  resolved "https://registry.yarnpkg.com/datatables.net-buttons-bs/-/datatables.net-buttons-bs-1.5.1.tgz#6d1b02bd3403a55f773620733275bb0b874e91cc"
+  resolved "https://registry.yarnpkg.com/datatables.net-buttons-bs4/-/datatables.net-buttons-bs4-1.5.1.tgz#496c60005721e01f43baa58172631112f4fa5a64"
   dependencies:
-    datatables.net-bs "^1.10.15"
+    datatables.net-bs4 "^1.10.15"
     datatables.net-buttons "1.5.1"
     jquery ">=1.7"
 
@@ -341,6 +341,10 @@ pdfmake@^0.1.35:
 png-js@>=0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/png-js/-/png-js-0.1.1.tgz#1cc7c212303acabe74263ec3ac78009580242d93"
+
+popper.js@^1.12.9:
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
 
 process-nextick-args@~1.0.6:
   version "1.0.7"
