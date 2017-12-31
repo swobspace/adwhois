@@ -2,27 +2,27 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.0'
 gem 'sqlite3'
+gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '>= 4.2'
 gem 'therubyracer', platforms: :ruby
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'turbolinks', '>= 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'rails-i18n', '~> 5.0.0'
 
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-yarn'
-  gem 'puma', '~> 3.0'
   gem 'spring'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'guard-rails'
   gem 'guard-bundler'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
