@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/swobspace/wobaduser.git
-  revision: 5557d9175544fc6b8407a895bf8497f392f4237e
+  revision: de4ab516b17a4b1d7f305b537ae42e86f04f7c8e
   branch: master
   specs:
     wobaduser (0.1.1)
@@ -138,11 +138,6 @@ GEM
     erubi (1.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     ffi (1.9.18)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
@@ -360,7 +355,6 @@ DEPENDENCIES
   coffee-rails (>= 4.2)
   database_rewinder
   dotenv
-  factory_girl_rails
   font-awesome-sass
   guard
   guard-bundler
