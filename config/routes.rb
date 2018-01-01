@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
 
-  mount Wobauth::Engine, at: '/'
+  mount Wobauth::Engine, at: '/auth'
 
   root 'ad_users#index'
 
