@@ -17,19 +17,15 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-yarn'
-  gem 'spring'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'guard-rails'
   gem 'guard-bundler'
   gem 'web-console', '~> 3.0'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'spring-commands-rspec'
   gem 'dotenv'
   gem 'guard-rspec', require: false
   gem 'byebug'
