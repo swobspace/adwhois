@@ -12,6 +12,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'bootsnap', require: false
 
 group :development do
   gem 'capistrano-rails'
