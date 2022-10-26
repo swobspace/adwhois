@@ -45,7 +45,7 @@ end
 
 gem 'simple_form'
 gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: '4-stable'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.0'
 gem 'cancancan'
 gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: '5-stable'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
