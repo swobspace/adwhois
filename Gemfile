@@ -50,11 +50,10 @@ gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
 gem 'rails-controller-testing'
 
-gem "turbo-rails", "~> 1.3"
 
 # Use Redis for Action Cable
 gem 'redis', '~> 4.0'
 
+gem "turbo-rails", "~> 1.3"
 gem "jsbundling-rails", "~> 1.0"
-
 gem "stimulus-rails", "~> 1.1"

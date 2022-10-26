@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ADWHOIS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbo-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbo-track' => true %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   <%= csrf_meta_tags %>
   <% if content_for?(:head) %>
     <%= yield(:head) %>
   <% end %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 </head>
 <body>
 
