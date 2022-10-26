@@ -44,7 +44,7 @@ group :production do
 end
 
 gem 'simple_form'
-gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
+gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: '4-stable'
 gem 'font-awesome-sass'
 gem 'cancancan'
 gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: '4-0-stable'
