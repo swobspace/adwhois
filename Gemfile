@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.1.0'
 gem 'sqlite3'
 gem 'puma'
 gem 'sass-rails', '~> 5.0'
@@ -22,7 +22,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'guard-rails'
   gem 'guard-bundler'
-  gem 'web-console', '~> 3.0'
+  gem 'web-console', '>= 4.1.0'
 end
 
 group :test, :development do
@@ -35,8 +35,6 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
   gem 'database_rewinder'
-  gem 'capybara'
-  gem 'poltergeist'
 end
 
 group :production do
