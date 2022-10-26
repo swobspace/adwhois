@@ -7,7 +7,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '>= 4.2'
 gem 'therubyracer', platforms: :ruby
-gem 'turbolinks', '>= 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
