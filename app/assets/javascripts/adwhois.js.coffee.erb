@@ -1,5 +1,4 @@
 # -- GLOBALS
-
 $.datepicker.setDefaults($.datepicker.regional['de'])
 $.datepicker.setDefaults({
       changeYear: true,
@@ -93,5 +92,6 @@ ready = ->
 
   $(".datepicker").datepicker()
 
-$(document).ready(ready)
-# $(document).on('page:load ready', ready)
+# $(document).ready(ready)
+# $(document).on('page:load', ready)
+$(document).on('turbo:load', ready)
