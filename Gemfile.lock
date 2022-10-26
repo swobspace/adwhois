@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/swobspace/wobapphelpers
-  revision: 0b650d2b05978ba3a5ef753caa33edb4fdcd811f
-  branch: master
+  revision: 3993f45596e39dea25c2982e26e6505fc0445d89
+  branch: 4-stable
   specs:
-    wobapphelpers (4.1.1)
+    wobapphelpers (4.2.0)
       coffee-rails
       font-awesome-sass (>= 4.7, <= 6)
       jquery-rails
@@ -200,7 +200,9 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.4)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
