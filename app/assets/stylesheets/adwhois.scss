@@ -5,13 +5,7 @@
 
 // --- colors
 $mh-blue: #0063ad;
-$colors: (
-  "blue": $mh-blue
-);
-$theme-colors: (
-  "primary": $mh-blue,
-  "custom": $mh-blue
-);
+$primary: $mh-blue;
 
 // --- bootstrap
 // $icon-font-path: "bootstrap/assets/fonts/bootstrap/";

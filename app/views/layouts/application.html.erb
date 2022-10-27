@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADWHOIS</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbo-track' => true %>
-  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  <%= csrf_meta_tags %>
-  <% if content_for?(:head) %>
-    <%= yield(:head) %>
-  <% end %>
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-custom">
-    <a class="navbar-brand" href="<%= root_path if defined?(root_path)%>#">ADWHOIS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <%= render partial: 'shared/navi' %>
-      <%= navigation_admin_links %>
-      <%= navigation_account_links %>
-    </div>
-  </nav>
-
-  <main class="container-fluid" role="main">
-    <%= render_breadcrumbs %>
-    <%= show_flash %>
-    <%= yield %>
-  </main>
-
-  <div id="footer" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-9">
-        <%= render :partial => 'shared/footer' %>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADWHOIS</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbo-track' => true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= csrf_meta_tags %>
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="<%= main_app.root_path if defined?(main_app.root_path)%>#">ADWHOIS</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerADWHOIS">
+        <%= render partial: 'shared/navi' %>
+        <%= render partial: 'wobauth/shared/admin' %>
+        <%= render partial: 'wobauth/shared/accounting' %>
+        <%# render partial: 'shared/info' %>
       </div>
-      <div class="col-sm-3">
-        <%= render :partial => 'shared/version' %>
+    </nav>
+
+    <main class="container-fluid" role="main">
+      <%= render_breadcrumbs %>
+      <%= show_flash %>
+      <%= yield %>
+    </main>
+
+    <div id="footer" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9">
+          <%= render :partial => 'shared/footer' %>
+        </div>
+        <div class="col-sm-3">
+          <%= render :partial => 'shared/version' %>
+        </div>
       </div>
     </div>
-  </div>
-
-</body>
+  </body>
 </html>
