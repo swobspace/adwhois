@@ -1,16 +1,11 @@
 // --- fontawesome
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "v4-shims.min";
 
 // --- colors
 $mh-blue: #0063ad;
-$colors: (
-  "blue": $mh-blue
-);
-$theme-colors: (
-  "primary": $mh-blue,
-  "custom": $mh-blue
-);
+$primary: $mh-blue;
 
 // --- bootstrap
 // $icon-font-path: "bootstrap/assets/fonts/bootstrap/";
@@ -51,3 +46,10 @@ div#footer{
   background-color: #008000;
 }
 
+// ------------------------------------------------------------------------
+// button_to: behaving just like a normal bootstrap button
+// ------------------------------------------------------------------------
+form.button_to {
+  display: inline-block;
+} 
+ 
