@@ -2,18 +2,17 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.1.0",
     "@hotwired/turbo-rails": "^7.2.4",
-    "bootstrap": "4.0.0-beta.3",
-    "datatables.net": "^1.10.16",
-    "datatables.net-bs4": "^1.10.16",
-    "datatables.net-buttons": "^1.5.1",
-    "datatables.net-buttons-bs4": "^1.5.1",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "5",
+    "datatables.net": "^1.12.1",
+    "datatables.net-bs5": "^1.12.1",
+    "datatables.net-buttons": "^2.2.3",
+    "datatables.net-buttons-bs5": "^2.2.3",
     "esbuild": "^0.15.12",
     "jquery": "3",
-    "jszip": "^3.1.5",
-    "pdfmake": "^0.1.35",
-    "popper.js": "^1.12.9",
-    "select2": "4",
-    "select2-bootstrap-theme": "^0.1.0-beta.10"
+    "jszip": "^3.10.1",
+    "pdfmake": "^0.2.6",
+    "tom-select": "^2.2.2"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
