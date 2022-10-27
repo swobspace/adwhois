@@ -67,6 +67,7 @@ export default class extends Controller {
     if (this.hasUrlValue) {
       this.remoteOptions(options)
     }
+    this.languageOptions(options)
   }
 
   simpleOptions(options) {
@@ -96,5 +97,31 @@ export default class extends Controller {
     options.processing = true
     options.serverSide = true
     options.ajax = { "url": this.urlValue, "type": "POST" }
+  }
+
+  languageOptions(options) {
+    options.language = {
+      "emptyTable":      "Keine Daten in der Tabelle vorhanden",
+      "info":            "_START_ bis _END_ von _TOTAL_ Einträgen",
+      "infoEmpty":       "0 bis 0 von 0 Einträgen",
+      "infoFiltered":    "(gefiltert von _MAX_ Einträgen)",
+      "infoPostFix":     "",
+      "thousands":   ".",
+      "lengthMenu":      "_MENU_ Einträge anzeigen",
+      "loadingRecords":  "Wird geladen...",
+      "processing":      "Bitte warten...",
+      "search":          "Suchen",
+      "zeroRecords":     "Keine Einträge vorhanden.",
+      "paginate": {
+          "first":       "Erste",
+          "previous":    "Zurück",
+          "next":        "Nächste",
+          "last":        "Letzte"
+      },
+      "aria": {
+          "sortAscending":  ": aktivieren, um Spalte aufsteigend zu sortieren",
+          "sortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+      }
+    }
   }
 } // Controller
