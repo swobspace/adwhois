@@ -1,4 +1,4 @@
-<div class="card bg-light">
+<div class="card bg-light mb-3">
   <div class="card-body p-1 m-1">
     <%= form_with url: ad_users_path do |f| -%>
       <div class="mb-3">
@@ -9,6 +9,4 @@
   </div>
 </div>
 
-<br>
-
-<%= render "ad_users/results" %>
+<%= turbo_frame_tag :results %>
