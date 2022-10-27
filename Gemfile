@@ -7,7 +7,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '>= 4.2'
 gem 'therubyracer', platforms: :ruby
-gem 'turbolinks', '>= 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -50,3 +49,11 @@ gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'mas
 gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
 gem 'rails-controller-testing'
+
+
+# Use Redis for Action Cable
+gem 'redis', '~> 4.0'
+
+gem "turbo-rails", "~> 1.3"
+gem "jsbundling-rails", "~> 1.0"
+gem "stimulus-rails", "~> 1.1"

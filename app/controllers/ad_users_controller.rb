@@ -9,6 +9,13 @@ class AdUsersController < ApplicationController
     else
       @ad_users = []
     end
+
+    respond_to do |format|
+      format.html {}
+      format.turbo_stream {
+        render turbo_stream: turbo_stream.replace("results", partial: "ad_users/results")
+      }
+    end
   end
 
 private
