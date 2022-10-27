@@ -46,3 +46,10 @@ div#footer{
   background-color: #008000;
 }
 
+// ------------------------------------------------------------------------
+// button_to: behaving just like a normal bootstrap button
+// ------------------------------------------------------------------------
+form.button_to {
+  display: inline-block;
+} 
+ 
