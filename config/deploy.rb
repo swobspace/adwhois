@@ -3,6 +3,7 @@ lock "~> 3.17.1"
 
 set :application, "adwhois"
 set :repo_url, "https://github.com/swobspace/adwhois.git"
+set :passenger_restart_with_touch, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
