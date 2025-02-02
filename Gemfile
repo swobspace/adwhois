@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 7.0.4'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem "sprockets-rails"
 # gem 'sassc-rails'
@@ -45,7 +45,7 @@ gem 'simple_form'
 gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
 gem 'font-awesome-sass', '~> 5.0'
 gem 'cancancan'
-gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'master'
+gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: '7-0-stable'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
 gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
@@ -62,3 +62,5 @@ gem "stimulus-rails", "~> 1.1"
 # for deployment
 gem "ed25519"
 gem "bcrypt_pbkdf"
+
+gem "concurrent-ruby", "= 1.3.4"
