@@ -1,16 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 7.0.4'
-gem 'sqlite3', '~> 1.4'
-gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.1.0'
+gem 'sqlite3' #, '~> 1.4'
+gem 'puma'
 gem "sprockets-rails"
-# gem 'sassc-rails'
-# gem 'uglifier', '>= 1.3.0'
-# gem 'coffee-rails', '>= 4.2'
-# gem 'therubyracer', platforms: :ruby
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# gem 'jquery-rails'
-# gem 'jquery-ui-rails'
 gem 'rails-i18n', '~> 7.0.0'
 gem 'bootsnap', require: false
 
@@ -19,9 +13,6 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-yarn'
   gem 'guard'
-  gem 'guard-livereload', require: false
-  gem 'guard-puma'
-  gem 'guard-bundler'
   gem 'web-console', '>= 4.1.0'
 end
 
@@ -43,9 +34,8 @@ end
 
 gem 'simple_form'
 gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
-gem 'font-awesome-sass', '~> 5.0'
 gem 'cancancan'
-gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: '7-0-stable'
+gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'master'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
 gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
@@ -53,14 +43,16 @@ gem 'rails-controller-testing'
 
 
 # Use Redis for Action Cable
-gem 'redis', '~> 4.0'
+gem 'redis', '>= 4.0'
 
-gem "turbo-rails", "~> 1.3"
-gem "jsbundling-rails", "~> 1.0"
-gem "stimulus-rails", "~> 1.1"
+gem "turbo-rails"
+gem "jsbundling-rails"
+gem "cssbundling-rails"
+gem "stimulus-rails"
 
 # for deployment
 gem "ed25519"
 gem "bcrypt_pbkdf"
 
-gem "concurrent-ruby", "= 1.3.4"
+# gem "concurrent-ruby", "= 1.3.4"
+
