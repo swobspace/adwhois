@@ -1,6 +1,7 @@
 <%= turbo_frame_tag :results do %>
   <div data-controller="datatables">
-    <table id="adusers" class="table table-bordered table-striped table-responsive-lg" role="datatable">
+   <div class="table-responsive">
+    <table id="adusers" class="table table-bordered table-striped" role="datatable">
       <thead>
         <tr>
           <th><%= t('attributes.sn') %></th>
@@ -12,13 +13,15 @@
           <th><%= t('attributes.company') %></th>
           <th><%= t('attributes.mail') %></th>
           <th><%= t('attributes.telephonenumber') %></th>
-          <th><%= t('attributes.facsimiletelephonenumber') %></th>
-          <th><%= t('attributes.mobile') %></th>
-          <th><%= t('attributes.username') %></th>
+          <th class="notvisible"><%= t('attributes.facsimiletelephonenumber') %></th>
+          <th class="notvisible"><%= t('attributes.mobile') %></th>
+          <th class="notvisible"><%= t('attributes.username') %></th>
+          <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -49,9 +52,11 @@
             <td><%= ad_user.facsimiletelephonenumber %></td>
             <td><%= ad_user.mobile %></td>
             <td><%= ad_user.username %></td>
+            <td><%= ad_user.extensionattribute15 %></td>
           <% end %>
         <% end %>
       </tbody>
     </table>
   </div>
+ </div>
 <% end %>
