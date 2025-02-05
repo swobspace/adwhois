@@ -54,5 +54,5 @@ gem "stimulus-rails"
 gem "ed25519"
 gem "bcrypt_pbkdf"
 
-# gem "concurrent-ruby", "= 1.3.4"
+gem "rack", "<= 2.99"
 
