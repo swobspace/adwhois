@@ -24,7 +24,7 @@ ask :branch, :master
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
-set :linked_files, %w{config/database.yml config/secrets.yml config/adwhois.yml}
+set :linked_files, %w{config/database.yml config/adwhois.yml}
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
@@ -42,7 +42,7 @@ set :default_env, -> do
     rails_relative_url_root: fetch(:relative_url_root),
     path: fetch(:ruby_path, "$PATH"),
     # just for deployment
-    secret_key_base: '902b285d9d35c566a8af987d3411b80e8276746d1590db8c7d5da7eb467fecfaf9ff496a41aec0ed3dc3e466f7af71d6b083374402d0e976a737f1f0df987a0'
+    SECRET_KEY_BASE_DUMMY: 1
   }
 end
 

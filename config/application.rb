@@ -6,6 +6,11 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Load dotenv only in development or test environment
+if ['development', 'test'].include? ENV['RAILS_ENV']
+  Dotenv::Rails.load
+end
+
 module Adwhois
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -23,5 +28,7 @@ module Adwhois
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.responders.error_status = :unprocessable_entity
+    config.responders.redirect_status = :see_other
   end
 end

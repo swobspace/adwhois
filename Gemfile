@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dotenv', groups: [:development, :test]
 gem 'rails', '~> 7.1.0'
 gem 'sqlite3' #, '~> 1.4'
 gem 'puma'
@@ -18,7 +19,6 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'dotenv'
   gem 'guard-rspec', require: false
   gem 'byebug'
 end
