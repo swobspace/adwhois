@@ -56,3 +56,5 @@ gem "bcrypt_pbkdf"
 
 gem "rack", "<= 2.99"
 
+
+gem "responders", "~> 3.1"
