@@ -43,15 +43,11 @@ private
   # objectclass=user will be implicit added via Wobaduser::User.filter
   def user_filter(query)
     filter  = "(&"
-    filter += "(|(sn=#{query}*)(givenName=#{query}*)(mail=#{query}*))"
+    filter += "(|(sn=#{query}*)(givenName=#{query}*)(mail=#{query}*)(samaccountname=#{query})(userprincipalname=#{query}*)(extensionAttribute15=#{query}*))"
     filter += "(!(sAMAccountname=admin*))"
     filter += "(!(sAMAccountname=*test*))"
-    filter += "(!(sn=*test*))"
-    filter += "(!(sn=*admin*))"
-    filter += "(!(givenName=*admin*))"
     filter += "(UserAccountControl:1.2.840.113556.1.4.803:=512)"
     filter += "(!(UserAccountControl:1.2.840.113556.1.4.803:=2))"
-    filter += "(!(primaryGroupID=512))"
     filter += "(!(msExchHideFromAddressLists=TRUE))"
     filter += ")"
     filter = Net::LDAP::Filter.construct(filter)
