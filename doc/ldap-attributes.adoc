@@ -1,0 +1,29 @@
+= LDAP Attributes
+
+== Sort
+
+https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/3c5e87db-4728-4f29-b164-01dd7d7391ea
+
+[%autowidth]
+|===
+|Extended control name    | OID
+
+|LDAP_SERVER_RESP_SORT_OID |1.2.840.113556.1.4.474
+|===
+
+
+.https://github.com/ruby-ldap/ruby-net-ldap/blob/master/lib/net/ldap/connection.rb#L284
+[source,ruby]
+----
+  #--
+  # Allow the caller to specify a sort control
+  #
+  # The format of the sort control needs to be:
+  #
+  # :sort_control => ["cn"]  # just a string
+  # or
+  # :sort_control => [["cn", "matchingRule", true]] #attribute, matchingRule, direction (true / false)
+  # or
+  # :sort_control => ["givenname","sn"] #multiple strings or arrays
+  #
+----

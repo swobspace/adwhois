@@ -1,7 +1,7 @@
 // --- fontawesome
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import "v4-shims.min";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+// @import "v4-shims.min";
 
 // --- colors
 $mh-blue: #0063ad;
@@ -10,7 +10,6 @@ $primary: $mh-blue;
 // --- bootstrap
 // $icon-font-path: "bootstrap/assets/fonts/bootstrap/";
 @import "bootstrap/scss/bootstrap";
-@import "wobapphelpers/breadcrumbs";
 
 body {
   padding-top: 60px;
