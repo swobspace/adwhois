@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "~> 3.17.1"
+lock "~> 3.19.0"
 
 set :application, "adwhois"
 set :repo_url, "https://github.com/swobspace/adwhois.git"
