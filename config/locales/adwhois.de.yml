@@ -27,9 +27,11 @@ de:
     mail: Mail
     mobile: Mobil
     name: Name
+    samaccountname: samAccountName
     sn: Nachname
     telephonenumber: Telefon
     username: Username
+    userprincipalname: userPrincipalName
 
   controller:
     ad_users: User

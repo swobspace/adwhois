@@ -15,12 +15,14 @@
           <th><%= t('attributes.telephonenumber') %></th>
           <th class="notvisible"><%= t('attributes.facsimiletelephonenumber') %></th>
           <th class="notvisible"><%= t('attributes.mobile') %></th>
-          <th class="notvisible"><%= t('attributes.username') %></th>
+          <th class="notvisible"><%= t('attributes.samaccountname') %></th>
+          <th class="notvisible"><%= t('attributes.userprincipalname') %></th>
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -51,6 +53,7 @@
             <td><%= ad_user.telephonenumber %></td>
             <td><%= ad_user.facsimiletelephonenumber %></td>
             <td><%= ad_user.mobile %></td>
+            <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
           <% end %>
