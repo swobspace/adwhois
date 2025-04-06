@@ -4,7 +4,7 @@
 
 <div class="card bg-light mb-3">
   <div class="card-body p-1 m-1">
-    <%= form_with url: ad_users_path do |f| -%>
+    <%= form_with url: ad_users_path, method: :get do |f| -%>
       <div class="mb-3">
         <label class="form-label">Name, Vorname oder E-Mail-Adresse:</label>
         <%= f.text_field :query, class: 'form-control' -%>

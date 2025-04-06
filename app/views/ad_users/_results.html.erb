@@ -1,4 +1,4 @@
-<%= turbo_frame_tag :results do %>
+<div id="results">
   <div data-controller="datatables">
    <div class="table-responsive">
     <table id="adusers" class="table table-bordered table-striped" role="datatable">
@@ -62,8 +62,8 @@
             <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
-            <td><%= t(ad_user.is_valid?, scope: 'boolean') %></td>
-            <td><%= t(ad_user.disabled,  scope: 'boolean') %></td>
+            <td><%= t(ad_user.is_valid?, scope: 'boolean', default: '') %></td>
+            <td><%= t(ad_user.disabled,  scope: 'boolean', default: 'Nein') %></td>
             <td><%= ad_user.memberof.join(", ") %></td>
           <% end %>
         <% end %>
@@ -71,4 +71,4 @@
     </table>
   </div>
  </div>
-<% end %>
+</div>
