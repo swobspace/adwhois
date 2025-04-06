@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/swobspace/wobaduser.git
-  revision: debff6a40813d4081354369e6625ae185dfea50f
+  revision: 69d4bb2f9e6297206277e676122e8a74a0e8b418
   branch: master
   specs:
     wobaduser (1.0.0)
