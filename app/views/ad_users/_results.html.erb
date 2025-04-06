@@ -18,10 +18,12 @@
           <th class="notvisible"><%= t('attributes.samaccountname') %></th>
           <th class="notvisible"><%= t('attributes.userprincipalname') %></th>
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
+          <th class="notvisible"><%= t('attributes.groups') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -56,6 +58,7 @@
             <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
+            <td><%= ad_user.groups.join(", ") %></td>
           <% end %>
         <% end %>
       </tbody>
