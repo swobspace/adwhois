@@ -18,6 +18,8 @@
           <th class="notvisible"><%= t('attributes.samaccountname') %></th>
           <th class="notvisible"><%= t('attributes.userprincipalname') %></th>
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
+          <th class="notvisible"><%= t('attributes.valid') %></th>
+          <th class="notvisible"><%= t('attributes.disabled') %></th>
           <th class="notvisible"><%= t('attributes.groups') %></th>
         </tr>
       </thead>
@@ -38,12 +40,14 @@
           <th></th>
           <th></th>
           <th></th>
+          <th></th>
+          <th></th>
         </tr>
       </tfoot>
 
       <tbody>
         <% @ad_users.each do |ad_user| %>
-          <%= content_tag(:tr) do %>
+          <%= content_tag(:tr, class: (ad_user.is_valid? ? "" : "invalid")) do %>
             <td><%= ad_user.sn %></td>
             <td><%= ad_user.givenname %></td>
             <td><%= ad_user.l %></td>
@@ -58,7 +62,9 @@
             <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
-            <td><%= ad_user.groups.join(", ") %></td>
+            <td><%= t(ad_user.is_valid?, scope: 'boolean') %></td>
+            <td><%= t(ad_user.disabled,  scope: 'boolean') %></td>
+            <td><%= ad_user.memberof.join(", ") %></td>
           <% end %>
         <% end %>
       </tbody>

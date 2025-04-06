@@ -1,4 +1,8 @@
 de:
+  boolean:
+    true: Ja
+    false: Nein
+
   adwhois:
     action: Aktion
     misc_info: Sonstige Angaben
@@ -19,6 +23,7 @@ de:
   attributes:
     department: Abteilung
     description: Beschreibung
+    disabled: deaktiviert
     displayname: Anzeigename
     extensionattribute15: extensionAttribute15
     facsimiletelephonenumber: Telefax
@@ -33,6 +38,7 @@ de:
     telephonenumber: Telefon
     username: Username
     userprincipalname: userPrincipalName
+    valid: gültig
 
   controller:
     ad_users: User
