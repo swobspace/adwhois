@@ -20,6 +20,7 @@ class SearchAdUserService
         errors += ldap.errors
         next
       end
+      Rails.logger.debug("DEBUG:: ldap search filter: #{user_filter(query)}")
       search = Wobaduser::User.search(ldap: ldap, filter: user_filter(query))
       if search.success?
         ad_users += search.entries
@@ -42,15 +43,27 @@ private
   # use filter in Wobaduser::User.search
   # objectclass=user will be implicit added via Wobaduser::User.filter
   def user_filter(query)
-    filter  = "(&"
-    filter += "(|(sn=#{query}*)(givenName=#{query}*)(mail=#{query}*)(samaccountname=#{query})(userprincipalname=#{query}*)(extensionAttribute15=#{query}*))"
-    filter += "(!(sAMAccountname=admin*))"
-    filter += "(!(sAMAccountname=*test*))"
-    filter += "(UserAccountControl:1.2.840.113556.1.4.803:=512)"
-    filter += "(!(UserAccountControl:1.2.840.113556.1.4.803:=2))"
-    filter += "(!(msExchHideFromAddressLists=TRUE))"
-    filter += ")"
+    # filter  = "(&"
+    filter = search_filter(query)
+    # filter += "(!(sAMAccountname=admin*))"
+    # filter += "(!(sAMAccountname=*test*))"
+    # filter += "(UserAccountControl:1.2.840.113556.1.4.803:=512)"
+    # filter += "(!(UserAccountControl:1.2.840.113556.1.4.803:=2))"
+    # filter += "(!(msExchHideFromAddressLists=TRUE))"
+    # filter += ")"
     filter = Net::LDAP::Filter.construct(filter)
+  end
+
+  def search_filter(query)
+    if query =~ /^group:(.*)$/
+      "(memberOf=#{$1})"
+    else
+      default_filter(query)
+    end
+  end
+
+  def default_filter(query)
+    "(|(sn=#{query}*)(givenName=#{query}*)(mail=#{query}*)(samaccountname=#{query})(userprincipalname=#{query}*)(extensionAttribute15=#{query}*))"
   end
 
   def ldap_options
