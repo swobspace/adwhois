@@ -20,11 +20,13 @@
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
           <th class="notvisible"><%= t('attributes.valid') %></th>
           <th class="notvisible"><%= t('attributes.disabled') %></th>
+          <th class="notvisible"><%= t('attributes.expirationdate') %></th>
           <th class="notvisible"><%= t('attributes.groups') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -64,6 +66,7 @@
             <td><%= ad_user.extensionattribute15 %></td>
             <td><%= t(ad_user.is_valid?, scope: 'boolean', default: '') %></td>
             <td><%= t(ad_user.disabled,  scope: 'boolean', default: 'Nein') %></td>
+            <td><%= ( ad_user.expirationdate.blank? ? 'n/a' : ad_user.expirationdate ) %></td>
             <td><%= ad_user.memberof.join(", ") %></td>
           <% end %>
         <% end %>

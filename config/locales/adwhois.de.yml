@@ -25,6 +25,7 @@ de:
     description: Beschreibung
     disabled: deaktiviert
     displayname: Anzeigename
+    expirationdate: Gültig bis
     extensionattribute15: extensionAttribute15
     facsimiletelephonenumber: Telefax
     givenname: Vorname
