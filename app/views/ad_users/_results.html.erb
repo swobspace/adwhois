@@ -67,7 +67,7 @@
             <td><%= t(ad_user.is_valid?, scope: 'boolean', default: '') %></td>
             <td><%= t(ad_user.disabled,  scope: 'boolean', default: 'Nein') %></td>
             <td><%= ( ad_user.expirationdate.blank? ? 'n/a' : ad_user.expirationdate ) %></td>
-            <td><%= ad_user.memberof.join(", ") %></td>
+            <td><%= ad_user.memberof.map{|g| group_link(g)}.join("<br/>").html_safe %></td>
           <% end %>
         <% end %>
       </tbody>
