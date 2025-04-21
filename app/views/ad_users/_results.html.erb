@@ -1,4 +1,4 @@
-<%= turbo_frame_tag :results do %>
+<div id="results">
   <div data-controller="datatables">
    <div class="table-responsive">
     <table id="adusers" class="table table-bordered table-striped" role="datatable">
@@ -18,10 +18,18 @@
           <th class="notvisible"><%= t('attributes.samaccountname') %></th>
           <th class="notvisible"><%= t('attributes.userprincipalname') %></th>
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
+          <th class="notvisible"><%= t('attributes.valid') %></th>
+          <th class="notvisible"><%= t('attributes.disabled') %></th>
+          <th class="notvisible"><%= t('attributes.expirationdate') %></th>
+          <th class="notvisible"><%= t('attributes.groups') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -41,7 +49,7 @@
 
       <tbody>
         <% @ad_users.each do |ad_user| %>
-          <%= content_tag(:tr) do %>
+          <%= content_tag(:tr, class: (ad_user.is_valid? ? "" : "invalid")) do %>
             <td><%= ad_user.sn %></td>
             <td><%= ad_user.givenname %></td>
             <td><%= ad_user.l %></td>
@@ -56,10 +64,14 @@
             <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
+            <td><%= t(ad_user.is_valid?, scope: 'boolean', default: '') %></td>
+            <td><%= t(ad_user.disabled,  scope: 'boolean', default: 'Nein') %></td>
+            <td><%= ( ad_user.expirationdate.blank? ? 'n/a' : ad_user.expirationdate ) %></td>
+            <td><%= ad_user.memberof.map{|g| group_link(g)}.join("<br/>").html_safe %></td>
           <% end %>
         <% end %>
       </tbody>
     </table>
   </div>
  </div>
-<% end %>
+</div>
