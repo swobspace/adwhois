@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/swobspace/wobauth.git
-  revision: 286bc726923d7a85eb769e54e55783a843e89e54
+  revision: 495c621f8c90a5521b63165ea60925685d1fe6bf
   branch: main
   specs:
     wobauth (7.1.0)
@@ -31,7 +31,7 @@ GIT
       simple_form
       stimulus-rails
       view_component
-      wobaduser (~> 1.0)
+      wobaduser
       wobapphelpers (>= 6.00)
 
 GEM
