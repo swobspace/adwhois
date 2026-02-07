@@ -40,6 +40,8 @@ de:
     username: Username
     userprincipalname: userPrincipalName
     valid: gültig
+    ru90: recently used
+    pwc: password changed
 
   controller:
     ad_users: User
