@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'dotenv', groups: [:development, :test]
-gem 'rails', '~> 7.2.0'
-gem 'sqlite3' #, '~> 1.4'
+gem 'rails', '~> 8.1.0'
+gem 'sqlite3'
 gem 'puma'
 gem "sprockets-rails"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'rails-i18n', '~> 7.0.0'
+gem 'rails-i18n', '~> 8.1.0'
 gem 'bootsnap', require: false
 
 group :development do
@@ -35,7 +35,7 @@ end
 gem 'simple_form'
 gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 'master'
 gem 'cancancan'
-gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'master'
+gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'main'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
 gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'

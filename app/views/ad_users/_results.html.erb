@@ -21,11 +21,15 @@
           <th class="notvisible"><%= t('attributes.valid') %></th>
           <th class="notvisible"><%= t('attributes.disabled') %></th>
           <th class="notvisible"><%= t('attributes.expirationdate') %></th>
+          <th class="notvisible"><%= t('attributes.ru90') %></th>
+          <th class="notvisible"><%= t('attributes.pwc') %></th>
           <th class="notvisible"><%= t('attributes.groups') %></th>
         </tr>
       </thead>
       <tfoot class="search">
         <tr>
+          <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -67,6 +71,9 @@
             <td><%= t(ad_user.is_valid?, scope: 'boolean', default: '') %></td>
             <td><%= t(ad_user.disabled,  scope: 'boolean', default: 'Nein') %></td>
             <td><%= ( ad_user.expirationdate.blank? ? 'n/a' : ad_user.expirationdate ) %></td>
+            <td><%= t(ad_user.recently_used,  scope: 'boolean', default: 'Nein') %></td>
+            <td><%= t(ad_user.password_changed,  scope: 'boolean', default: 'Nein') %></td>
+
             <td><%= ad_user.memberof.map{|g| group_link(g)}.join("<br/>").html_safe %></td>
           <% end %>
         <% end %>
