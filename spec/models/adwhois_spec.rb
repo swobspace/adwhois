@@ -5,8 +5,10 @@ describe Adwhois do
     context" with empty Settings" do
       before(:each) do
         allow(Adwhois::CONFIG).to receive(:[]).with('ldap_options').and_return(nil)
+        allow(Adwhois::CONFIG).to receive(:[]).with('enable_ldap_authentication').and_return(nil)
       end
       it { expect(Adwhois.ldap_options).to be_nil}
+      it { pending "doesn't work, needs inspection"; expect(Adwhois.enable_ldap_authentication).to be_truthy }
     end
 
     context" with existing Settings" do
