@@ -43,7 +43,7 @@ gem 'rails-controller-testing'
 
 
 # Use Redis for Action Cable
-gem 'redis', '>= 4.0'
+gem "redis", ">= 4.0.1", "< 6"
 
 gem "turbo-rails"
 gem "jsbundling-rails"
