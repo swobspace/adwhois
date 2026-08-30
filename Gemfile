@@ -37,7 +37,6 @@ gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 
 gem 'cancancan'
 gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'main'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
-gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
 gem 'rails-controller-testing'
 

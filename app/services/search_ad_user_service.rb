@@ -1,5 +1,5 @@
 class SearchAdUserService
-  Result = ImmutableStruct.new( :success?, :error_messages, :ad_users )
+  Result = Data.define( :success?, :error_messages, :ad_users )
 
   def initialize(options = {})
     @options = options.symbolize_keys
@@ -9,7 +9,7 @@ class SearchAdUserService
 
   def call
     unless query
-      return Result.new(success: false, error_messages: ["no query given"], ad_users: [])
+      return Result.new(success?: false, error_messages: ["no query given"], ad_users: [])
     end
 
     errors = []
@@ -31,9 +31,9 @@ class SearchAdUserService
 
 
     if errors.any?
-      return Result.new(success: false, error_messages: errors, ad_users: ad_users)
+      return Result.new(success?: false, error_messages: errors, ad_users: ad_users)
     else
-      result = Result.new(success: true, error_messages: errors, ad_users: ad_users)
+      result = Result.new(success?: true, error_messages: errors, ad_users: ad_users)
     end
   end
 

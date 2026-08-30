@@ -409,7 +409,6 @@ DEPENDENCIES
   ed25519
   guard
   guard-rspec
-  immutable-struct
   jsbundling-rails
   mysql2
   puma
