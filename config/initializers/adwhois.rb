@@ -19,4 +19,12 @@ module Adwhois
     end
   end
 
+  def self.enable_ldap_authentication
+    return false unless self.ldap_options.present?
+    fetch_config('enable_ldap_authentication', true)
+  end
+
+  def self.fetch_config(attribute, default_value)
+    CONFIG[attribute.to_s].presence || default_value
+  end
 end

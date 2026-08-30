@@ -12,4 +12,6 @@ Wobauth.setup do |config|
   #
   # config.authorized_for_types = [ "MyClass", ...]
   #
+  config.ldap_config = File.join( Rails.root, 'config', 'adwhois.yml')
+  config.enable_ldap_authenticatable = Adwhois.enable_ldap_authentication
 end

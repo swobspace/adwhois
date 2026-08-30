@@ -14,6 +14,7 @@
           <th><%= t('attributes.telephonenumber') %></th>
           <th class="notvisible"><%= t('attributes.facsimiletelephonenumber') %></th>
           <th class="notvisible"><%= t('attributes.mobile') %></th>
+          <% if current_user %>
           <th class="notvisible"><%= t('attributes.samaccountname') %></th>
           <th class="notvisible"><%= t('attributes.userprincipalname') %></th>
           <th class="notvisible"><%= t('attributes.extensionattribute15') %></th>
@@ -23,6 +24,7 @@
           <th class="notvisible"><%= t('attributes.ru90') %></th>
           <th class="notvisible"><%= t('attributes.pwc') %></th>
           <th class="notvisible"><%= t('attributes.groups') %></th>
+          <% end %>
         </tr>
       </thead>
       <tfoot class="search">
@@ -38,6 +40,7 @@
           <th></th>
           <th></th>
           <th></th>
+          <% if current_user %>
           <th></th>
           <th></th>
           <th></th>
@@ -47,6 +50,7 @@
           <th></th>
           <th></th>
           <th></th>
+          <% end %>
         </tr>
       </tfoot>
 
@@ -64,6 +68,7 @@
             <td><%= ad_user.telephonenumber %></td>
             <td><%= ad_user.facsimiletelephonenumber %></td>
             <td><%= ad_user.mobile %></td>
+            <% if current_user %>
             <td><%= ad_user.samaccountname %></td>
             <td><%= ad_user.username %></td>
             <td><%= ad_user.extensionattribute15 %></td>
@@ -74,6 +79,7 @@
             <td><%= t(ad_user.password_changed,  scope: 'boolean', default: 'Nein') %></td>
 
             <td><%= ad_user.memberof.map{|g| group_link(g)}.join("<br/>").html_safe %></td>
+            <% end %>
           <% end %>
         <% end %>
       </tbody>

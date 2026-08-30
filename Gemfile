@@ -37,13 +37,12 @@ gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers', branch: 
 gem 'cancancan'
 gem 'wobauth', git: 'https://github.com/swobspace/wobauth.git', branch: 'main'
 gem 'wobaduser', git: 'https://github.com/swobspace/wobaduser.git', branch: 'master'
-gem 'immutable-struct'
 gem 'record_tag_helper', '~> 1.0'
 gem 'rails-controller-testing'
 
 
 # Use Redis for Action Cable
-gem 'redis', '>= 4.0'
+gem "redis", ">= 4.0.1", "< 6"
 
 gem "turbo-rails"
 gem "jsbundling-rails"
