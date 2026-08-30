@@ -28,6 +28,7 @@
 capybara-*.html
 .rspec
 /public/system
+/public/webfonts
 /coverage/
 /spec/tmp
 **.orig
@@ -56,4 +57,5 @@ config/secrets.yml
 /.env*
 !/.env*.erb
 !/.env*.example
+
 
