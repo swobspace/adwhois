@@ -1,5 +1,5 @@
 module Adwhois
-  VERSION     = "1.7.6".freeze
-  RELEASEDATE = "2026-08-30".freeze
+  VERSION     = "1.7.7-dev".freeze
+  RELEASEDATE = "2026-08-31".freeze
 end
 
