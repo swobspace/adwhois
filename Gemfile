@@ -4,7 +4,7 @@ gem 'dotenv', groups: [:development, :test]
 gem 'rails', '~> 8.1.0'
 gem 'sqlite3'
 gem 'puma'
-gem "sprockets-rails"
+gem "propshaft"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-i18n', '~> 8.1.0'
 gem 'bootsnap', require: false
